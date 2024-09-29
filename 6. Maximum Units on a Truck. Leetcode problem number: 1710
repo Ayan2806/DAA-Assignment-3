@@ -1,0 +1,30 @@
+class Solution(object):
+    def maximumUnits(self, boxTypes, truckSize):
+        ans = 0
+        for a, b in sorted(boxTypes, key=lambda x: -x[1]):
+            ans += b * min(truckSize, a)
+            truckSize -= min(truckSize, a)  # Update truckSize to reflect boxes taken
+            if truckSize <= 0:
+                break
+        return ans
+
+# Taking input from the user
+boxTypes = []
+
+# Get number of box types
+n = int(input())
+
+# Get each box type
+for _ in range(n):
+    numberOfBoxes, unitsPerBox = map(int, input().split(","))
+    boxTypes.append([numberOfBoxes, unitsPerBox])
+
+# Get the truck size
+truckSize = int(input())
+
+# Create the solution instance and compute the result
+solution = Solution()
+result = solution.maximumUnits(boxTypes, truckSize)
+
+# Output the result
+print("Maximum number of units that can be put on the truck:", result)
