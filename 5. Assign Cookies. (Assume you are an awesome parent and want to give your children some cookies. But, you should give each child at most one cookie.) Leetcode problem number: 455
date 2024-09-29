@@ -1,0 +1,26 @@
+class Solution(object):
+    def findContentChildren(self, g, s):
+        g.sort()  # Sort the children's greed factors
+        s.sort()  # Sort the cookie sizes
+        cookie, kid = 0, 0  # Initialize pointers for cookies and kids
+
+        # Iterate until we run out of cookies or children
+        while cookie < len(s) and kid < len(g):
+            if s[cookie] >= g[kid]:  # If the cookie can satisfy the child
+                kid += 1  # Move to the next child
+            cookie += 1  # Move to the next cookie
+        
+        return kid  # Return the number of content children
+
+# Accept greed factor and size of cookie from the user
+g = list(map(int, input().split(",")))
+s = list(map(int, input().split(",")))
+
+# Create an instance of the Solution class
+solution = Solution()
+
+# Find the maximum number of content children
+result = solution.findContentChildren(g, s)
+
+# Print the result
+print("Maximum number of content children:", result)
