@@ -1,0 +1,18 @@
+The following problems are given here in the repository:-
+
+1. Implementation of Merge Sort. TC: O(n log n)
+2. Implementation of Max-Min by using Divide and Conquer principal TC:
+O(n)
+3. Fractional Knapsack GeeksForGeeks Implementation of Fractional
+KnapSack TC: O(n log n) (Problem Statement: The weight of N items and
+their corresponding values are given. We have to put these items in a
+knapsack of weight W such that the total value obtained is maximized.)
+4. Implementation of Prim’s Algorithm.
+5. Assign Cookies. (Assume you are an awesome parent and want to give
+your children some cookies. But, you should give each child at most one
+cookie.) Leetcode problem number: 455
+6. Maximum Units on a Truck. Leetcode problem number: 1710
+7. Lemonade Change. Leetcode problem number: 860
+8. Merge Intervals Leetcode problem number: 56
+9. LCS LeetCode problem number 1143
+10. Number of Coins GeeksForGeeks
