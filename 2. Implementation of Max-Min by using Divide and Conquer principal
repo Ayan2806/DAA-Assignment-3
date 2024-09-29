@@ -1,0 +1,20 @@
+def max_min(arr, low, high):
+    if low == high:
+        return arr[low], arr[low]
+    
+    elif high == low + 1:
+        return (min(arr[low], arr[high]), max(arr[low], arr[high]))
+
+    else:
+        mid = (low + high) // 2
+        min1, max1 = max_min(arr, low, mid)
+        min2, max2 = max_min(arr, mid + 1, high)
+        return min(min1, min2), max(max1, max2)
+
+if __name__ == "__main__":
+    arr = list(map(int, input().split(",")))
+    low = 0
+    high = len(arr) - 1
+    min_value, max_value = max_min(arr, low, high)
+    print("Minimum value:", min_value)
+    print("Maximum value:", max_value)
